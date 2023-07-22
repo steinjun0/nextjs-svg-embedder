@@ -8,7 +8,6 @@ export default function SvgEmbedder({ src, force = false, ...props }: { src: { s
     let svgString = require('fs').readFileSync(imgPath).toString().replace(/<svg/, `<svg ${propsString}`);
     if (force) {
         Object.entries(props).forEach(([key, value]) => {
-            console.log(key);
             svgString = svgString.replace(new RegExp(`${key}=".+?"`, 'g'), `${key}="${value}"`);
         }
         );
