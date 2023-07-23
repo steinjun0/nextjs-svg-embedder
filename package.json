@@ -1,12 +1,15 @@
 {
   "name": "@steinjun0/nextjs-svg-embedder",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Embedding SVGs in Next.js Server Side Rendered Pages",
   "scripts": {
-    "rollup": "rollup -c"
+    "rollup": "rm -rf ./dist && rollup -c"
   },
   "author": "steinjun0",
   "license": "ISC",
+  "peerDependencies": {
+    "next": "^13.0.0"
+  },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.3",
     "@rollup/plugin-node-resolve": "^15.1.0",
