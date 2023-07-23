@@ -3,7 +3,7 @@
   "version": "0.1.5",
   "description": "Embedding SVGs in Next.js Server Side Rendered Pages",
   "scripts": {
-    "build": "rm -rf ./dist && tsc -p tsconfig.json --declaration --declarationDir dist && rollup -c",
+    "build": "rm -rf ./dist && tsc -p tsconfig.json --declaration --declarationDir dist/types && rollup -c",
     "rollup": "rollup -c",
     "tsc": "tsc -p tsconfig.json --declaration --declarationDir dist"
   },
