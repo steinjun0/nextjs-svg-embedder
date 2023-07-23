@@ -3,6 +3,7 @@ const commonjs = require("@rollup/plugin-commonjs");
 const typescript = require("@rollup/plugin-typescript");
 const builtins = require('builtin-modules');
 const dts = require("rollup-plugin-dts").default
+const babel = require("@rollup/plugin-babel").default;
 
 const packageJson = require("./package.json");
 
@@ -16,7 +17,7 @@ const external = pkg => {
 
 module.exports = [
   {
-    input: "src/index.ts",
+    input: "dist/index.js",
     output: [
       {
         file: packageJson.main,
@@ -33,7 +34,11 @@ module.exports = [
     plugins: [
       resolve(),
       commonjs(),
-      typescript({ tsconfig: "./tsconfig.json" }),
+      // typescript({ tsconfig: "./tsconfig.json" }),
+      babel({
+        babelHelpers: "bundled",
+      }),
+      
     ],
   },
   {
