@@ -7,12 +7,10 @@ const dts = require("rollup-plugin-dts").default
 const packageJson = require("./package.json");
 
 const external = pkg => {
-  const externals = [...Object.keys({ ...packageJson.dependencies, ...packageJson.peerDependencies }), ...builtins, 'tslib', 'react'];
+  const externals = [...Object.keys({ ...packageJson.dependencies, ...packageJson.peerDependencies }), ...builtins];
   const result = externals.some(externalPkg => {
     return pkg.startsWith(externalPkg);
   });
-  // console.log(externals)
-  // console.log(pkg,result)
   return result
 };
 

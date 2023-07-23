@@ -8,7 +8,9 @@
   "author": "steinjun0",
   "license": "ISC",
   "peerDependencies": {
-    "next": "^13.0.0"
+    "next": "^13.0.0",
+    "react": "^16.8 || ^17 || ^18",
+    "tslib": "^2.6.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.3",
