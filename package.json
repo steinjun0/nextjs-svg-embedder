@@ -1,6 +1,6 @@
 {
   "name": "@steinjun0/nextjs-svg-embedder",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Embedding SVGs in Next.js Server Side Rendered Pages",
   "keywords": ["nextjs", "svg", "embed", "embedder", "server side rendering", "ssr", "app router"],
   "scripts": {
